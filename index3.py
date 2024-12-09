@@ -90,36 +90,6 @@ bib.add_book(book2)
 class Product:
     def __init__(self, name, price, quantity):
         self.name = name
-        self.price = price 
-        self.quantity = quantity
-
-    def update_quantity(self, amount):
-        self.quantity += amount
-        return f"Текущее количество товара '{self.name}': {self.quantity}"
-
-class ShoppingCart(Product):
-    def __init__(self):
-        self.items = (Product, self.quantity)
-
-    def add_product(self, Product, quantity, cart):
-        self.cart = [] 
-        if self.quantity == quantity:
-            Product += self.cart
-        else:
-            return f'Товара {Product} недостаточно'
-
-    def remove_product(self, product_name):
-        self.cart.revove(product_name)
-        return self.quantity
-    
-    def chekout(self, amount, cart):
-        return amount
-        self.cart.clear()
-
-
-class Product:
-    def __init__(self, name, price, quantity):
-        self.name = name
         self.price = price
         self.quantity = quantity
 
@@ -165,11 +135,11 @@ product2 = Product("Смартфон", 20000, 5)
 
 cart = ShoppingCart()
 
-print(cart.add_product(product1, quantity=2))  
-print(cart.add_product(product2, quantity=3))  
+# print(cart.add_product(product1, quantity=2))  
+# print(cart.add_product(product2, quantity=3))  
 
-print(f"Общая стоимость товаров в корзине: {cart.get_total_price()}")
+# print(f"Общая стоимость товаров в корзине: {cart.get_total_price()}")
 
-print(cart.remove_product("Смартфон"))
+# print(cart.remove_product("Смартфон"))
 
-print(cart.checkout())
+# print(cart.checkout())
